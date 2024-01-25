@@ -75,6 +75,7 @@ dependencies {
     //deobfCompile "betterdiving:BetterDiving:${mc_version}-1.3.42"
     deobfProvided "curse.maven:tough-as-nails-246391:2644652"
     deobfProvided "curse.maven:random-things-59816:2667184"
+    deobfProvided "curse.maven:simpledifficulty-for-underdog-574162:4651150"
     deobfCompile "curse.maven:angry-pixel-the-betweenlands-mod-243363:2766910"
     deobfCompile "curse.maven:vampirism-become-a-vampire-233029:2832151"
 
