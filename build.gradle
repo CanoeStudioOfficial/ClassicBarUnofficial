@@ -1,12 +1,16 @@
 buildscript {
     repositories {
         jcenter()
-        maven { url = "https://files.minecraftforge.net/maven" }
+        maven { url = 'https://maven.minecraftforge.net' }
+        maven { url = 'https://plugins.gradle.org/m2/' }
+    mavenCentral()
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
+        classpath "com.wynprice.cursemaven:CurseMaven:2.1.5"
     }
 }
+
 
 plugins {
     id "com.wynprice.cursemaven" version "2.1.0"
@@ -38,12 +42,7 @@ minecraft {
 }
 repositories {
     maven {
-        url 'https://maven.mcmoddev.com' 
-    }
-
-    maven {
-        name = "CurseForge"
-        url = "https://minecraft.curseforge.com/api/maven/"
+        url "https://cursemaven.com"
     }
     }
 dependencies {
