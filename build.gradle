@@ -1,21 +1,17 @@
 buildscript {
     repositories {
         jcenter()
-        maven { url = 'https://maven.minecraftforge.net' }
-        maven { url = 'https://plugins.gradle.org/m2/' }
-    mavenCentral()
+        maven { url = "https://files.minecraftforge.net/maven" }
     }
     dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
-        classpath "com.wynprice.cursemaven:CurseMaven:2.1.5"
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
     }
 }
-
 
 plugins {
     id "com.wynprice.cursemaven" version "2.1.0"
 }
-apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
@@ -29,7 +25,7 @@ compileJava {
 }
 
 minecraft {
-    minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2860'
+    version = "1.12.2-14.23.5.2838"
     runDir = "run"
     
     // the mappings can be changed at any time, and must be in the following format.
@@ -42,7 +38,12 @@ minecraft {
 }
 repositories {
     maven {
-        url "https://cursemaven.com"
+        url 'https://maven.mcmoddev.com' 
+    }
+
+    maven {
+        name = "CurseForge"
+        url = "https://minecraft.curseforge.com/api/maven/"
     }
     }
 dependencies {
